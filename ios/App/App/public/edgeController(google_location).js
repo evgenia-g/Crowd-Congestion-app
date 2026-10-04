@@ -18,7 +18,7 @@ const DB_NAME = 'mongooo';
 let db, locsCollection, historyCollection;
 const tables =["default_WeatherObserved_Wind_1_WeatherObserved", "default_WeatherObserved_Wind_2_WeatherObserved", "default_WeatherObserved_Atmospheric_1_WeatherObserved", "default_WeatherObserved_Atmospheric_2_WeatherObserved", "default_NoiseLevelObserved_1_NoiseLevelObserved", "default_NoiseLevelObserved_2_NoiseLevelObserved"];
 const CLIENT_ID = '260243600706-e5u8mdaiap2q54eo9frj7r40lnjnq2ro.apps.googleusercontent.com';
-const APIKEY = 'REDACTED';
+const APIKEY = process.env.GOOGLE_API_KEY || ''; // set GOOGLE_API_KEY in your environment, never commit it
 const { OAuth2Client } = require('google-auth-library');
 const { duration } = require('moment');
 const client = new OAuth2Client(CLIENT_ID);
