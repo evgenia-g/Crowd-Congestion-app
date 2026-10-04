@@ -117,6 +117,14 @@ The application will be available at:
 http://localhost:4200/
 ```
 
+### Local HTTPS (optional)
+
+The HTTPS dev setup (`run.bat`, `angular.json`, backend) expects a self-signed certificate at `src/assets/server.key` and `src/assets/server.crt`. Generate your own (they are git-ignored):
+
+```bash
+openssl req -x509 -newkey rsa:2048 -nodes -keyout src/assets/server.key -out src/assets/server.crt -days 365 -subj "/CN=localhost"
+```
+
 ### Production Build
 
 ```bash

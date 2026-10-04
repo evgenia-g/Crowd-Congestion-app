@@ -1,2 +1,6 @@
 
 .env
+
+# Local HTTPS certificate (generate your own, never commit)
+*.key
+server.crt
